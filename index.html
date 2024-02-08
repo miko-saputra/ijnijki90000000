@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>F02</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.prinsh.com/NathanPrinsley-textstyle/nprinsh-stext.css"/>
+    <script type='text/javascript' src='https://cdn.prinsh.com/NathanPrinsley-effect/efek-salju.js'></script>
+    
+    <style>
+    
+    body{
+      background-color: #000000;
+    }
+        /* CSS untuk video */
+        .vi1 {
+            display: none; /* Menyembunyikan video secara default */
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Ubah sesuai kebutuhan */
+            margin: 0 auto;
+        }
+
+        .vi1 video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* CSS untuk tombol */
+        .centered-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .custom-button {
+            display: block;
+            width: 200px; /* Sesuaikan lebar tombol */
+            padding: 10px;
+            text-align: center;
+            background-color: #d9d9d9; /* Warna latar belakang */
+            color: #fff; /* Warna teks */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hover effect */
+        .custom-button:hover {
+            background-color: #2980b9; /* Warna latar belakang saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Tombol untuk memulai video -->
+    <button class="custom-button centered-button" onclick="showVideo()">Klik</button>
+
+    <!-- Video -->
+    <div class="vi1" id="videoDiv">
+        <video id="myVideo" >
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <center>
+        <div class="nav">
+<div class="nprinsley-text-redan"><p>MIKUL DUWUR MENDHEM JERO</p>
+</div>
+<marquee>seorang anak yg ingin mengangkat derajat orang tua</marquee>
+</div>
+</center>
+<style>
+    .nav p{
+        margin-top: 100px;
+        font-weight: bold;
+        font-size: 20px;
+        
+    }
+    
+    .nav marquee{
+        width: 170px;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+    <script>
+        var video = document.getElementById("myVideo");
+        var videoDiv = document.getElementById("videoDiv");
+        var button = document.querySelector('.custom-button');
+
+        // Fungsi untuk mengarahkan ke halaman baru ketika video selesai
+        
+
+        // Fungsi untuk menampilkan video saat tombol ditekan
+        function showVideo() {
+            videoDiv.style.display = 'block'; // Menampilkan video
+            video.play(); // Memulai video
+            button.style.display = 'none'; // Menyembunyikan tombol setelah video dimulai
+        }
+    </script>
+</body>
+</html>
