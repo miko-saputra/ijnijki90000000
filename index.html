@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Pop Up Notification</title>
+<style>
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        z-index: 9999;
+    }
+</style>
+</head>
+<body>
+
+<div id="popup" class="popup" style="display:none;">
+    <h2>Notification</h2>
+    <p>ubah tampilan ke mode desktop.</p>
+    <button onclick="hidePopup()"><a href="1.html">Close</a></button>
+</div>
+
+<script>
+    // Menampilkan pop up setelah jeda waktu tertentu (misalnya 5 detik)
+    setTimeout(function() {
+        showPopup();
+    }, 3000); // 5000 milidetik = 5 detik
+
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
